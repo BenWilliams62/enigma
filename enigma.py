@@ -84,7 +84,7 @@ def main():
 
 
     print("\noutput message:\n")
-    print(output)
+    print(output.upper())
 
 if __name__ == "__main__":
     main()
