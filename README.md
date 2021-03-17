@@ -17,8 +17,7 @@ Just a quick enigma program. Meant to emulate the function of a 3 wheel enigma m
   - plugboard, rotor1, rotor2, and rotor3 must use every letter once as a key and once as a value
 3. Run the enigma.py file
   > python enigma.py
-4. enter the digits for rotor starting positions
-5. enter your message
+4. enter your message
 
 ## License
 No official license. Open for all users
