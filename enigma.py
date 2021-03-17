@@ -13,6 +13,7 @@ from functions import (
 def main():
     # plug board - change the keys to desired plugs.
     # Use every character once as a key and once as a value
+    # Set this regularly
     plug_board = {
         "a":"z",
         "b":"y",
@@ -41,20 +42,23 @@ def main():
         "y":"b",
         "z":"a"
     }
+    # Set these switches irregularly
     rotor_1_switch = 5
-    rotor_2_switch = 25
-    rotor_3_switch = 25
+    rotor_2_switch = 2
+    rotor_3_switch = 13
 
     # dont touch values below here
-    input_value = input_message()
-    output = ""
+    output = ""                     # sets output as empty string to append values to
+    print("\nrotor settings:\n")
     rotor_1_index = int(input("enter the number for rotor 1's starter position:\n"))   # starting value
     rotor_2_index = int(input("enter the number for rotor 2's starter position:\n"))   # starting value
     rotor_3_index = int(input("enter the number for rotor 3's starter position:\n"))   # starting value
+    print("\n\n")
+    input_value = input_message()   # takes an input string
 
     for char in input_value:
-        # validate - escape spaces and punctuation
-        if char.isalpha() == 0:
+        
+        if char.isalpha() == 0: # validate - escape spaces and punctuation
             output += char
         else:
             # put through plug board
@@ -99,14 +103,17 @@ def main():
             if rotor_1_index > rotor_1_switch:
                 rotor_1_index -= 26
                 rotor_2_index += 1
+
             if rotor_2_index > rotor_2_switch:
                 rotor_2_index -= 26
                 rotor_3_index += 1
+
             if rotor_3_index > rotor_3_switch:
                 rotor_3_index -= 26
 
 
-    print("\noutput:\n", output)
+    print("\noutput message:\n")
+    print(output)
 
 if __name__ == "__main__":
     main()
