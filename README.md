@@ -15,10 +15,10 @@ Just a quick enigma program. Meant to emulate the function of a 3 wheel enigma m
 2. configure the settings.json file
   - rotorSwitch1, rotorSwitch2, rotorSwitch3, rotor1Index, rotor2Index, and rotor3Index must be integeres between 0 and 25
   - plugboard, rotor1, rotor2, and rotor3 must use every letter once as a key and once as a value
-4. Run the enigma.py file
-> python enigma.py
-5. enter the digits for rotor starting positions
-6. enter your message
+3. Run the enigma.py file
+  > python enigma.py
+4. enter the digits for rotor starting positions
+5. enter your message
 
 ## License
 No official license. Open for all users
